@@ -22,6 +22,8 @@ if [ "$ssh_key" != "" ]; then
 	ln -s "$1/.ssh" "$HOME/.ssh"
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 
+        set -x
+        ls -la
         ls -la $1/.ssh
 	ls -la $HOME/.ssh
 
