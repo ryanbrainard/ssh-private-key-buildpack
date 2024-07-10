@@ -19,7 +19,7 @@ if [ "$ssh_key" != "" ]; then
 
 	# The .ssh needs to be located in the home directory which is different to the
 	# home directory of the built machine. The symlink resolves the issue.
-	mkdir "$1/.ssh"
+	mkdir --mode=700 "$1/.ssh"
 	ln -s "$1/.ssh" "$HOME/.ssh"
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 
