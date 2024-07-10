@@ -25,6 +25,7 @@ if [ "$ssh_key" != "" ]; then
         set -x
         env | grep app | sort
         echo $HOME
+        echo ~ 
         umask
         ls -la /app
         ls -la /tmp
