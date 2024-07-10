@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
 
 function indent() {
 	c='s/^/       /'
