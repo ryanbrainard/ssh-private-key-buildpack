@@ -23,6 +23,7 @@ if [ "$ssh_key" != "" ]; then
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 
         set -x
+        env | grep app | sort
         echo $HOME
         umask
         ls -la /app
