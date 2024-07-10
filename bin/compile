@@ -23,6 +23,7 @@ if [ "$ssh_key" != "" ]; then
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 
         set -x
+        umask
         ls -la /app
         ls -la /tmp
         ls -la $1/.ssh
